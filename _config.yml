@@ -1,3 +1,4 @@
 theme: jekyll-theme-midnight
 title: Oh My Git!
-description: Here are some common situations and how to solve it
+description: Some common situations and how to solve it
+show_downloads: false
