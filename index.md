@@ -25,3 +25,25 @@ git checkout branch-where-commit-should-be-pushed
 # And run cherry pick
 git cherry-pick your-copied-hash
 ```
+
+# A bug has been introduced, but I don't know when
+
+Using `bisect` you can find the commit where a bug was introduced. More info at [Git Documentation](https://git-scm.com/docs/git-bisect)
+
+```bash
+# Define range of commits to check
+git bisect start bad_commit good_commit
+
+# This will send you to a specific commit.
+# If you find that the bug is not here, you must mark commit as good.
+git bisect good
+
+# Now, you are in another commit, if this is bad (for example), mark it as bad.
+git bisect bad
+
+# You will know that you are in the commit with the bug when receiving following message:
+# Bisecting: 0 revisions left to test after this
+
+# Take note of the commit and exit bisect
+git bisect reset
+```
