@@ -41,7 +41,8 @@ git bisect good
 # Now, you are in another commit, if this is bad (for example), mark it as bad.
 git bisect bad
 
-# You will know that you are in the commit with the bug when receiving following message:
+# You will know that you are in the commit with the bug when 
+# receiving following message:
 # Bisecting: 0 revisions left to test after this
 
 # Take note of the commit and exit bisect
