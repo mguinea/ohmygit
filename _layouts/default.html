@@ -18,6 +18,7 @@
 
 </head>
 <body>
+{% if site.header %}
 <div id="header">
     <nav>
         {% if site.view_on_github %}
@@ -29,7 +30,9 @@
         <li class="title">DOWNLOADS</li>
         {% endif %}
     </nav>
-</div><!-- end header -->
+</div>
+{% endif %}
+<!-- end header -->
 
 <div class="wrapper">
 
